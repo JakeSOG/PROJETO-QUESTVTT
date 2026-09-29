@@ -1,0 +1,60 @@
+{
+  "min": 0,
+  "max": 40,
+  "parasite": "Dementiatos Scoupulus",
+  "sanityRoll": ["vontade", "sanidade"],
+  "sanityDifficulties": [
+    { "id": "perturbador", "name": "Perturbador", "successes": 1 },
+    { "id": "aterrador", "name": "Aterrador", "successes": 2 },
+    { "id": "horrendo", "name": "Horrendo", "successes": 3 },
+    { "id": "incompreensivel", "name": "Incompreensível", "successes": 4 },
+    { "id": "cosmico", "name": "Cósmico", "successes": 5 }
+  ],
+  "onSanityFail": 1,
+  "onSanityCriticalFail": 2,
+  "gains": [
+    { "event": "Falhar num teste de Sanidade", "value": "+1" },
+    { "event": "Falha Crítica num teste de Sanidade", "value": "+2" },
+    { "event": "Realizar Ritual Cósmico", "value": "+2" },
+    { "event": "Contemplar um Primordial", "value": "+2" },
+    { "event": "Contemplar um Ascendente", "value": "+4" },
+    { "event": "Morrer", "value": "+5 automático" },
+    { "event": "Usar Arcano proibido ou instável", "value": "+1 a +3" },
+    { "event": "Tocar artefato ancestral vivo", "value": "+1 a +3" },
+    { "event": "Fazer pacto com entidade cósmica", "value": "+3 ou mais" }
+  ],
+  "milestoneReduction": { "difficulty": 3, "reduce": 2 },
+  "stages": [
+    { "id": "estavel", "name": "Estável", "min": 0, "max": 7, "mutation": null, "text": "O parasita ainda não deixou sinais.", "fx": 0 },
+    { "id": "hospedeiro", "name": "Hospedeiro", "min": 8, "max": 15, "mutation": "oculta", "text": "+1 Mutação Oculta.", "fx": 1 },
+    { "id": "infestado", "name": "Infestado", "min": 16, "max": 23, "mutation": "discreta", "text": "+1 Mutação Discreta. Se uma mutação for descoberta, NPCs passam a ser Desconfiados.", "fx": 2 },
+    { "id": "deformado", "name": "Deformado", "min": 24, "max": 31, "mutation": "evidente", "text": "+1 Mutação Evidente. -1 dado em Presença. NPCs evitam contato.", "fx": 3, "modifiers": { "skills": { "presenca": -1 } } },
+    { "id": "aberrante", "name": "Aberrante", "min": 32, "max": 39, "mutation": "exposta", "text": "+1 Mutação Exposta. Comerciantes se recusam a vender, e a Igreja passa a caçá-lo.", "fx": 4, "modifiers": { "skills": { "presenca": -1 } } },
+    { "id": "ascensao", "name": "Ascensão", "min": 40, "max": 40, "mutation": null, "text": "O parasita vence. O caçador se torna uma fera por completo e deixa de ser jogável.", "fx": 5 }
+  ],
+  "mutationGrades": [
+    { "id": "oculta", "name": "Oculta", "stage": "hospedeiro", "hide": "Roupas comuns bastam" },
+    { "id": "discreta", "name": "Discreta", "stage": "infestado", "hide": "Luvas, golas altas e chapéus" },
+    { "id": "evidente", "name": "Evidente", "stage": "deformado", "hide": "Só um traje completo a esconde de olhares casuais" },
+    { "id": "exposta", "name": "Exposta", "stage": "aberrante", "hide": "Impossível esconder" }
+  ],
+  "screenEffects": {
+    "_comment": "Efeitos visuais na tela do próprio jogador conforme o estágio (fx 0..5). whisperMinFx = a partir de qual estágio aparecem sussurros; whisperEveryMinutes = intervalo médio.",
+    "whisperMinFx": 2,
+    "whisperEveryMinutes": 6,
+    "whispers": [
+      "...você ouviu isso? Veio de dentro da parede.",
+      "Ela está olhando. Ela sempre esteve olhando.",
+      "O sangue lembra. O sangue sempre lembra.",
+      "Não confie em quem ainda tem olhos só no rosto.",
+      "Tão perto... só mais um pouco e você vai entender.",
+      "As velas estão contando. Uma. Duas...",
+      "Seu reflexo piscou antes de você.",
+      "Coma. Você está com fome. Você sempre esteve com fome.",
+      "A Lua sabe o seu nome verdadeiro.",
+      "Por que eles não ouvem? Por que só você ouve?",
+      "Há algo sob a sua pele que quer sair para ver.",
+      "Os mortos de Varsuke estão cantando o seu nome."
+    ]
+  }
+}

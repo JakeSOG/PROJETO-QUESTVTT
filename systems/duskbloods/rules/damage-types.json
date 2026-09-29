@@ -1,0 +1,16 @@
+{
+  "types": [
+    { "id": "Incisium", "name": "Incisium", "plain": "Cortante", "color": "#b33a3a", "text": "Lâminas, cortes, ferimentos abertos" },
+    { "id": "Contusio", "name": "Contusio", "plain": "Contundente", "color": "#8a7a66", "text": "Impacto, esmagamento, quedas" },
+    { "id": "Penetrabile", "name": "Penetrabile", "plain": "Perfurante", "color": "#a0a0a0", "text": "Estocadas, projéteis, agulhas" },
+    { "id": "Ignis", "name": "Ignis", "plain": "Fogo", "color": "#e0762b", "text": "Queimadura, combustão" },
+    { "id": "Fulmen", "name": "Fulmen", "plain": "Raio", "color": "#5fa8e8", "text": "Choque, descarga elétrica" },
+    { "id": "Veneficium", "name": "Veneficium", "plain": "Veneno", "color": "#6b9a3a", "text": "Toxina, doença, corrupção química" },
+    { "id": "Umbra", "name": "Umbra", "plain": "Sombra", "color": "#6a4c93", "text": "Dano espectral e oculto" },
+    { "id": "Mentallis", "name": "Mentallis", "plain": "Mental", "color": "#c27ba0", "text": "Dano mental, contato com o vazio" },
+    { "id": "Cruor", "name": "Cruor", "plain": "Sangue", "color": "#7a0f16", "text": "Sangramento, ruptura interna" }
+  ],
+  "weakness": { "extraDice": "1d6", "multiplied": false },
+  "resistance": { "divisor": 2, "round": "down", "afterMultipliers": true },
+  "excessGoesToFirstPart": true
+}

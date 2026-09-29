@@ -1,0 +1,42 @@
+{
+  "_comment": "Estados. rounds = duração padrão (null = até o fim do próximo turno do alvo, i.e. 1). dot = dano contínuo no início do turno. modifiers = efeitos automáticos aplicados pelo motor. icon = emoji/símbolo exibido no token.",
+  "defaultRounds": 1,
+  "resist": {
+    "fisico": ["vigor", "resiliencia"],
+    "mental": ["vontade", "sanidade"],
+    "cosmico": ["vontade", "fe"]
+  },
+  "states": [
+    { "id": "prostratus", "name": "Prostratus", "category": "fisico", "group": "negativo", "icon": "⤓", "text": "Derrubado. Levantar custa 2 PA.", "rounds": null, "untilRemoved": true },
+    { "id": "coagulum", "name": "Coagulum", "category": "fisico", "group": "negativo", "icon": "❄", "text": "-3 PA por turno, -2 Vigor, -2 Agilidade.", "modifiers": { "paRecoveryMod": -3, "attributes": { "vigor": -2, "agilidade": -2 } } },
+    { "id": "pavor", "name": "Pavor", "category": "mental", "group": "negativo", "icon": "☠", "text": "Medo, hesitação ou fuga." },
+    { "id": "torpor", "name": "Torpor", "category": "mental", "group": "negativo", "icon": "☁", "text": "-2 Intelecto, -2 Percepção, -2 Vontade.", "modifiers": { "attributes": { "intelecto": -2, "percepcao": -2, "vontade": -2 } } },
+    { "id": "silentium", "name": "Silentium", "category": "fisico", "group": "negativo", "icon": "🤐", "text": "Impede fala e Arcanos verbais." },
+    { "id": "vinculum", "name": "Vinculum", "category": "fisico", "group": "negativo", "icon": "⛓", "text": "Limita movimento e mobilidade precisa." },
+    { "id": "subjugatio", "name": "Subjugatio", "category": "mental", "group": "negativo", "icon": "♛", "text": "Controle mental parcial ou total." },
+    { "id": "fractura", "name": "Fractura", "category": null, "group": "especial", "icon": "✖", "text": "Guarda quebrada. Perde o próximo turno e fica vulnerável a Ataque Visceral.", "modifiers": { "losesTurn": true } },
+    { "id": "inermis", "name": "Inermis", "category": null, "group": "especial", "icon": "⊘", "text": "Não pode usar ações defensivas.", "modifiers": { "noDefense": true } },
+    { "id": "immotus", "name": "Immotus", "category": null, "group": "especial", "icon": "⚓", "text": "Não pode se deslocar." },
+    { "id": "latens", "name": "Latens", "category": null, "group": "especial", "icon": "👁", "text": "Não pode ser atacado diretamente sem ser detectado.", "untilRemoved": true },
+    { "id": "apertus", "name": "Apertus", "category": null, "group": "especial", "icon": "◌", "text": "-1 no Limiar contra o próximo ataque recebido.", "modifiers": { "limiar": -1 }, "consumeOnAttackReceived": true, "untilRemoved": true },
+    { "id": "ardens", "name": "Ardens", "category": "fisico", "group": "continuo", "icon": "🔥", "text": "1d4 de dano Ignis no início do turno, por 2 turnos.", "rounds": 2, "dot": { "dice": "1d4", "type": "Ignis" } },
+    { "id": "fulguratio", "name": "Fulguratio", "category": "fisico", "group": "continuo", "icon": "⚡", "text": "Não pode gastar mais de 3 PA no próximo turno.", "modifiers": { "paSpendCap": 3 } },
+    { "id": "corruptus", "name": "Corruptus", "category": "fisico", "group": "continuo", "icon": "☣", "text": "1d4 de dano Veneficium no início do turno, até ser curado ou resistido.", "untilRemoved": true, "dot": { "dice": "1d4", "type": "Veneficium" } },
+    { "id": "exsanguis", "name": "Exsanguis", "category": "fisico", "group": "continuo", "icon": "🩸", "text": "1d4 de dano Cruor no início do turno, por 2 turnos. -1 dado em Resiliência e Acrobacia.", "rounds": 2, "dot": { "dice": "1d4", "type": "Cruor" }, "modifiers": { "skills": { "resiliencia": -1, "acrobacia": -1 } } },
+    { "id": "firmamentum", "name": "Firmamentum", "group": "positivo", "icon": "🛡", "text": "Vida Temporária (valor do estado).", "untilRemoved": true, "hasValue": true },
+    { "id": "impetus", "name": "Impetus", "group": "positivo", "icon": "💪", "text": "+2 Vigor, +2 Agilidade.", "modifiers": { "attributes": { "vigor": 2, "agilidade": 2 } } },
+    { "id": "tertium-oculus", "name": "Tertium Oculus", "group": "positivo", "icon": "🔮", "text": "+2 Intelecto, +2 Percepção.", "modifiers": { "attributes": { "intelecto": 2, "percepcao": 2 } } },
+    { "id": "fortitudo", "name": "Fortitudo", "group": "positivo", "icon": "✚", "text": "+2 Vontade.", "modifiers": { "attributes": { "vontade": 2 } } },
+    { "id": "impervius", "name": "Impervius", "group": "positivo", "icon": "🧠", "text": "Imunidade temporária a efeitos mentais.", "modifiers": { "immune": ["mental"] } },
+    { "id": "impenetrabilis", "name": "Impenetrabilis", "group": "positivo", "icon": "⛨", "text": "Imunidade temporária a efeitos físicos negativos.", "modifiers": { "immune": ["fisico"] } },
+    { "id": "retributio", "name": "Retributio", "group": "positivo", "icon": "↩", "text": "Reflete 50% do dano corpo a corpo recebido." },
+    { "id": "haustus", "name": "Haustus", "group": "positivo", "icon": "✦", "text": "Arcanos recebidos concedem +1 PA." },
+    { "id": "morrendo", "name": "Morrendo", "group": "especial", "icon": "🕯", "text": "0 de Vida. Caído e Inermis. Role Vigor + Resiliência no início de cada turno (velas).", "untilRemoved": true, "modifiers": { "noDefense": true } },
+    { "id": "postura-elevada", "name": "Postura Elevada", "group": "auxiliar", "icon": "▲", "text": "Fase de Chefe: +1 de Limiar.", "rounds": 2, "modifiers": { "limiar": 1 } },
+    { "id": "limiar-mais", "name": "Limiar +1", "group": "auxiliar", "icon": "⬆", "text": "Bônus de Limiar (Arcanos como Pellis Aspera). Use o valor do estado para bônus maiores.", "hasValue": true, "modifiers": { "limiarFromValue": true } },
+    { "id": "limiar-menos", "name": "Limiar -1", "group": "auxiliar", "icon": "⬇", "text": "Penalidade de Limiar (ex.: Mutatio Accelerata).", "modifiers": { "limiar": -1 } },
+    { "id": "vantagem", "name": "Vantagem", "group": "auxiliar", "icon": "➕", "text": "+1D6 no próximo teste.", "untilRemoved": true, "consumeOnRoll": true, "hasValue": true, "modifiers": { "diceFromValue": 1 } },
+    { "id": "desvantagem", "name": "Desvantagem", "group": "auxiliar", "icon": "➖", "text": "-1D6 no próximo teste.", "untilRemoved": true, "consumeOnRoll": true, "modifiers": { "dice": -1 } },
+    { "id": "adrenalina", "name": "Adrenalina", "group": "auxiliar", "icon": "💉", "text": "Máximo de PA 11 até o fim do combate. Depois: Torpor até o próximo descanso.", "untilRemoved": true, "modifiers": { "paMax": 11 } }
+  ]
+}

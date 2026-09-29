@@ -1,0 +1,28 @@
+{
+  "min": -20,
+  "max": 20,
+  "start": 0,
+  "maxRecoveryPerSession": 2,
+  "bands": [
+    { "min": 20, "max": 20, "name": "Altruísta" },
+    { "min": 6, "max": 19, "name": "Íntegro" },
+    { "min": -5, "max": 5, "name": "Neutro" },
+    { "min": -19, "max": -6, "name": "Problemático" },
+    { "min": -20, "max": -20, "name": "Nocivo" }
+  ],
+  "losses": [
+    { "action": "Abandonar inocentes à morte", "value": -1 },
+    { "action": "Torturar alguém", "value": -1 },
+    { "action": "Matar um humano indefeso", "value": -2 },
+    { "action": "Trair um aliado", "value": -2 },
+    { "action": "Usar inocentes como sacrifício", "value": -3 },
+    { "action": "Aceitar pacto com Primordial ou Ascendente", "value": -3 }
+  ],
+  "gains": [
+    { "action": "Proteger inocentes com risco real", "value": 1 },
+    { "action": "Poupar um inimigo quando seria mais fácil matar", "value": 1 },
+    { "action": "Cumprir um juramento importante", "value": 1 },
+    { "action": "Enterrar os mortos ou reparar um erro grave", "value": 1 },
+    { "action": "Sacrificar algo valioso por outra pessoa", "value": 2 }
+  ]
+}

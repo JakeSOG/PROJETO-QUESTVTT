@@ -1,0 +1,15 @@
+{
+  "_comment": "Configuração do QuestVTT. Troque as senhas antes de jogar! tablePassword vazio = mesa sem senha.",
+  "port": 3000,
+  "tableName": "Noite de Caça em Yharnam",
+  "system": "duskbloods",
+  "gmName": "Mestre",
+  "gmPassword": "trocar-esta-senha",
+  "tablePassword": "",
+  "autoApprovePlayers": false,
+  "allowSpectators": true,
+  "uploadMaxMB": 25,
+  "backupKeep": 20,
+  "backupEveryMinutes": 30,
+  "chatHistory": 200
+}

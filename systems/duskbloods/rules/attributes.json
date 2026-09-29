@@ -1,0 +1,36 @@
+{
+  "attributes": [
+    { "id": "vigor", "name": "Vigor", "abbr": "VIG" },
+    { "id": "agilidade", "name": "Agilidade", "abbr": "AGI" },
+    { "id": "intelecto", "name": "Intelecto", "abbr": "INT" },
+    { "id": "percepcao", "name": "Percepção", "abbr": "PER" },
+    { "id": "vontade", "name": "Vontade", "abbr": "VON" }
+  ],
+  "skills": [
+    { "id": "armas-pesadas", "name": "Armas Pesadas", "attribute": "vigor", "text": "Ataques com formas Pesadas" },
+    { "id": "resiliencia", "name": "Resiliência", "attribute": "vigor", "aliases": ["resistencia", "resistência"], "text": "Força, fôlego, agarrar, dor, venenos, doença e testes contra a morte" },
+    { "id": "instinto", "name": "Instinto", "attribute": "vigor", "text": "Canalização de Thumeria, domínio do corpo mutado, sinais da Praga e comportamento de feras" },
+    { "id": "armas-ageis", "name": "Armas Ágeis", "attribute": "agilidade", "text": "Ataques com formas Ágeis" },
+    { "id": "acrobacia", "name": "Acrobacia", "attribute": "agilidade", "text": "Saltar, escalar, equilibrar-se, mover-se em silêncio e fugir" },
+    { "id": "destreza", "name": "Destreza", "attribute": "agilidade", "text": "Arremessos, prestidigitação, fechaduras e mecanismos delicados" },
+    { "id": "ocultismo", "name": "Ocultismo", "attribute": "intelecto", "text": "Canalização de Byerghwaith, rituais, conhecimento proibido e identificação de criaturas" },
+    { "id": "medicina", "name": "Medicina", "attribute": "intelecto", "text": "Cura, anatomia e estabilização de moribundos" },
+    { "id": "alquimia", "name": "Alquimia", "attribute": "intelecto", "text": "Substâncias, venenos e preparo dos materiais das Marcas" },
+    { "id": "armas-de-fogo", "name": "Armas de Fogo", "attribute": "percepcao", "text": "Revólveres, Contra-Tiro e Tiro de Abate" },
+    { "id": "investigacao", "name": "Investigação", "attribute": "percepcao", "text": "Notar, procurar, deduzir e pressentir perigo" },
+    { "id": "sobrevivencia", "name": "Sobrevivência", "attribute": "percepcao", "text": "Rastrear, orientar-se, lidar com a natureza e montar armadilhas" },
+    { "id": "fe", "name": "Fé", "attribute": "vontade", "text": "Canalização de Mornvein, ritos, relíquias e os meandros da Igreja" },
+    { "id": "presenca", "name": "Presença", "attribute": "vontade", "text": "Persuadir, intimidar, enganar, liderar e ler as intenções alheias" },
+    { "id": "sanidade", "name": "Sanidade", "attribute": "vontade", "text": "Resistir ao horror e ao acúmulo de Dementia" }
+  ],
+  "proficiency": { "max": 3, "labels": ["—", "I", "II", "III"] },
+  "creation": {
+    "attributeBase": 1,
+    "attributePoints": 10,
+    "attributeMaxAtCreation": 5,
+    "attributeMaxAfterCreation": 6,
+    "freeSkillPicks": 3,
+    "bonusSkillPickPerAttributeAt": 5,
+    "samePickMaxTimes": 2
+  }
+}

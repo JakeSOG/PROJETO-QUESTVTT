@@ -1,0 +1,30 @@
+{
+  "rest": {
+    "hpFraction": 0.5,
+    "fullHpInDream": true,
+    "restoresGuard": true,
+    "text": "Uma pausa de pelo menos uma hora em lugar seguro: recupera metade da Vida máxima (arredondada para baixo), toda a Guarda, renova usos por descanso e permite trocar Arcanos preparados. Não reduz Dementia nem restaura Frascos."
+  },
+  "death": {
+    "dementia": 5,
+    "ecosStayOnCorpse": true,
+    "clearsTemporaryStates": true,
+    "firstCorpseSanity": 2,
+    "text": "Ecos ficam no cadáver, +5 Dementia, perde efeitos temporários, desperta no Sonho do Caçador."
+  },
+  "startingKit": {
+    "flasks": 3,
+    "ecos": 0,
+    "ammo": 10,
+    "basicWeapons": ["lamina-simples", "cassetete-de-ferro", "lanca-curta", "machadinha-de-caca", "facas-gemeas"],
+    "offHandChoices": ["revolver-de-cacador", "canalizador-de-iniciado"],
+    "items": [{ "ref": "pingente-da-oficina", "qty": 1 }]
+  },
+  "carry": {
+    "base": 6,
+    "perVigor": 1,
+    "movePenaltyPerSlot": 2,
+    "heavyOverloadAt": 5,
+    "slots": { "weapon": 2, "weaponHeavy": 3, "weaponCompact": 1, "revolver": 1, "revolverLarge": 2, "channeler": 1, "flasksPerSlot": 5, "materialsPerSlot": 5 }
+  }
+}

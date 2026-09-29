@@ -1,0 +1,56 @@
+{
+  "_comment": "Vida = hp.base + Vigor × hp.vigorMultiplier (+ bônus de marcos de Discernimento em discernment.json). spellSlots = Espaços de Magia base.",
+  "classes": [
+    {
+      "id": "cruentaris", "name": "Cruentâris", "title": "Fera de Aço", "style": "Brutal, resistente",
+      "question": "Quero resistir, avançar e destruir pela força?",
+      "hp": { "base": 14, "vigorMultiplier": 2 }, "guard": 9,
+      "classSkills": ["armas-pesadas"], "academies": ["thumeria"], "martial": true, "spellSlots": 2,
+      "affinity": "Armas cuja Forma Padrão ou Forma de Truque seja Pesada e de Duas Mãos.",
+      "passive": { "id": "furia-encouracada", "name": "Fúria Encouraçada", "usesPerCombat": 1,
+        "text": "Uma vez por combate, se o personagem já atacou na Forma de Truque neste combate, seu próximo Ataque Visceral não exige alvo em Fractura. O ataque ainda custa 3 PA." }
+    },
+    {
+      "id": "venaturnus", "name": "Venatûrnus", "title": "Marca da Presa", "style": "Predador, preciso",
+      "question": "Quero caçar alvos específicos e controlar o ritmo da luta?",
+      "hp": { "base": 11, "vigorMultiplier": 1 }, "guard": 8,
+      "classSkills": ["armas-de-fogo"], "academies": ["mornvein"], "martial": true, "spellSlots": 2,
+      "affinity": "Armas de alcance ou precisão, com Forma de Truque voltada a dano perfurante.",
+      "passive": { "id": "leitura-da-presa", "name": "Leitura da Presa", "modifiers": { "counterShotCost": 3 },
+        "text": "O Contra-Tiro do Venatûrnus custa 3 PA em vez de 4. Quando ele coloca uma criatura em Fractura com um Contra-Tiro, seu próximo ataque contra ela ignora Redução de Dano." }
+    },
+    {
+      "id": "noctivus", "name": "Noctivus", "title": "Lâmina da Névoa", "style": "Ágil, furtivo",
+      "question": "Quero ser rápido, preciso e difícil de acertar?",
+      "hp": { "base": 9, "vigorMultiplier": 1 }, "guard": 8,
+      "classSkills": ["armas-ageis"], "academies": ["byerghwaith"], "martial": true, "spellSlots": 2,
+      "affinity": "Armas cuja Forma Padrão seja Ágil e de Uma Mão.",
+      "passive": { "id": "passo-da-nevoa", "name": "Passo da Névoa", "modifiers": { "defenseBonus": { "esquiva": 2 } },
+        "text": "A Esquiva do Noctivus concede +2 ao Limiar em vez de +1. Se um ataque errar enquanto ele estiver esquivando, seu próximo ataque contra aquela criatura recebe Vantagem (+1D6)." }
+    },
+    {
+      "id": "sanctifer", "name": "Sanctifer", "title": "Guardião das Velas", "style": "Devoto, suporte",
+      "question": "Quero proteger, curar e sustentar aliados?",
+      "hp": { "base": 8, "vigorMultiplier": 1 }, "guard": 7,
+      "classSkills": ["fe"], "academies": ["byerghwaith", "mornvein"], "martial": false, "spellSlots": 4,
+      "affinity": "Canalizador obrigatório, com arma leve compatível com manter o Canalizador em mãos na maior parte do combate.",
+      "passive": { "id": "vinculo-do-selo", "name": "Vínculo do Selo",
+        "text": "Enquanto a arma estiver na Forma Padrão e o Canalizador estiver em mãos, todo Arcano de cura ou proteção conjurado recebe +1D6, e toda cura do Sanctifer também restaura 1 de Guarda do alvo." }
+    },
+    {
+      "id": "arcanivagus", "name": "Arcanivagus", "title": "Andarilho do Vazio", "style": "Arcano, adaptável",
+      "question": "Quero sobreviver usando conhecimento, Arcano e adaptação?",
+      "hp": { "base": 7, "vigorMultiplier": 1 }, "guard": 7,
+      "classSkills": ["ocultismo", "instinto"], "academies": ["byerghwaith", "thumeria"], "martial": false, "spellSlots": 4,
+      "affinity": "Canalizador obrigatório, com arma TOC leve (Ágil, Uma Mão) opcional na outra mão.",
+      "passive": { "id": "reserva-arcana", "name": "Reserva Arcana", "usesPerCombat": 1, "extraPa": 2,
+        "text": "Uma vez por combate, pode conjurar um Arcano mesmo com as duas mãos ocupadas pela Forma de Truque, canalizando pelo próprio sangue em vez do Canalizador. O Arcano custa +2 PA." }
+    }
+  ],
+  "academies": [
+    { "id": "byerghwaith", "name": "Byerghwaith", "theme": "Cosmos", "roll": ["intelecto", "ocultismo"] },
+    { "id": "mornvein", "name": "Mornvein", "theme": "Sangue", "roll": ["vontade", "fe"] },
+    { "id": "thumeria", "name": "Thumeria", "theme": "Fera", "roll": ["vigor", "instinto"] }
+  ],
+  "spellSlotsFromChanneler": 1
+}

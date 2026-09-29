@@ -1,0 +1,13 @@
+{
+  "_comment": "Revólveres: sempre Uma Mão, rolam Percepção + Armas de Fogo, podem fazer Contra-Tiro e Tiro de Abate. Não podem ser reforçados.",
+  "entries": [
+    { "id": "revolver-de-cacador", "name": "Revólver de Caçador", "pa": 2, "damage": [{ "dice": "1d6", "type": "Penetrabile" }], "ammoCapacity": 6, "slots": 1, "price": 120, "text": "O padrão, sem traço especial." },
+    { "id": "repetidor-de-seis-tiros", "name": "Repetidor de Seis Tiros", "pa": 3, "damage": [{ "dice": "1d4", "type": "Penetrabile" }], "shots": 2, "ammoPerAction": 2, "ammoCapacity": 6, "slots": 1, "price": 200, "text": "Dois disparos na mesma ação." },
+    { "id": "canhao-de-mao", "name": "Canhão de Mão", "pa": 3, "damage": [{ "dice": "1d8", "type": "Penetrabile" }], "maxRange": 3, "ammoCapacity": 1, "slots": 2, "price": 250, "text": "Funciona apenas a até 3 metros." },
+    { "id": "bacamarte-de-caca", "name": "Bacamarte de Caça", "pa": 3, "damage": [{ "dice": "2d4", "type": "Penetrabile" }], "area": "cone", "ammoCapacity": 2, "slots": 2, "price": 220, "text": "Cone curto, atinge vários alvos." },
+    { "id": "pistola-de-precisao", "name": "Pistola de Precisão", "pa": 2, "damage": [{ "dice": "1d6", "type": "Penetrabile" }], "bonusDiceAtRange": { "min": 5, "dice": 1 }, "ammoCapacity": 6, "slots": 1, "price": 200, "text": "+1 dado contra alvos a 5 metros ou mais." },
+    { "id": "revolver-perfurante", "name": "Revólver Perfurante", "pa": 2, "damage": [{ "dice": "1d4", "type": "Penetrabile" }], "ignoreDr": 2, "ammoCapacity": 6, "slots": 1, "price": 200, "text": "Ignora até 2 de Redução de Dano." },
+    { "id": "pistola-incendiaria", "name": "Pistola Incendiária", "pa": 2, "damage": [{ "dice": "1d4", "type": "Penetrabile" }, { "dice": "1d4", "type": "Ignis" }], "ammoItem": "municao-incendiaria", "ammoCapacity": 6, "slots": 1, "price": 220, "text": "Só dispara munição incendiária." },
+    { "id": "revolver-silencioso", "name": "Revólver Silencioso", "pa": 2, "damage": [{ "dice": "1d4", "type": "Penetrabile" }], "killShotBonusDice": 1, "ammoCapacity": 6, "slots": 1, "price": 180, "text": "+1 dado em Tiro de Abate." }
+  ]
+}

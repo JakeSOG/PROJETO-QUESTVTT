@@ -1,0 +1,32 @@
+{
+  "_comment": "Núcleo do sistema de pool de D6. Altere os números aqui para balancear o jogo sem mexer em código.",
+  "dice": {
+    "sides": 6,
+    "successMin": 5,
+    "explodeOn": 6,
+    "explode": true,
+    "maxExplosionsPerDie": 20
+  },
+  "criticalFailure": {
+    "_comment": "Quando uma rolagem não obtém nenhum sucesso, todo 1 é rolado de novo; cada novo 1 conta como uma falha adicional. Interpretação do VTT: há Falha Crítica se ao menos um novo 1 aparecer. Mude requireNewOne para false se quiser que qualquer 1 numa rolagem sem sucesso já seja Falha Crítica.",
+    "requireZeroSuccesses": true,
+    "rerollFace": 1,
+    "requireNewOne": true
+  },
+  "criticalSuccessExcess": 4,
+  "criticalDamageMultiplier": 2,
+  "advantageDice": 1,
+  "minimumPool": 0,
+  "difficulties": [
+    { "id": "facil", "name": "Fácil", "successes": 1 },
+    { "id": "normal", "name": "Normal", "successes": 2 },
+    { "id": "dificil", "name": "Difícil", "successes": 3 },
+    { "id": "muito-dificil", "name": "Muito Difícil", "successes": 4 },
+    { "id": "quase-impossivel", "name": "Quase Impossível", "successes": 5 }
+  ],
+  "excessTable": [
+    { "min": 1, "max": 2, "text": "Pequeno bônus" },
+    { "min": 3, "max": 3, "text": "Bônus significativo" },
+    { "min": 4, "max": 99, "text": "Sucesso Crítico" }
+  ]
+}

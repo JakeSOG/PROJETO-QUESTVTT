@@ -1,0 +1,20 @@
+{
+  "entries": [
+    { "id": "veias-escuras", "name": "Veias Escuras", "grade": "oculta", "text": "As veias dos braços e do peito escurecem. +1 dado para resistir a Corruptus e Exsanguis." },
+    { "id": "marcas-estelares", "name": "Marcas Estelares", "grade": "oculta", "modifiers": { "skills": { "ocultismo": 1 } }, "text": "Manchas pálidas formam constelações na pele. +1 dado em Ocultismo." },
+    { "id": "faro-de-sangue", "name": "Faro de Sangue", "grade": "oculta", "text": "Sente o cheiro de sangue a até 30 m. +1 dado em Sobrevivência para rastrear." },
+    { "id": "noites-em-claro", "name": "Noites em Claro", "grade": "oculta", "text": "O parasita não deixa dormir. Um descanso leva meia hora em vez de uma." },
+    { "id": "unhas-negras", "name": "Unhas Negras", "grade": "discreta", "modifiers": { "unarmedDamage": [{ "dice": "1d6", "type": "Incisium" }] }, "text": "Ataques desarmados causam 1d6 Incisium." },
+    { "id": "olhos-de-fera", "name": "Olhos de Fera", "grade": "discreta", "modifiers": { "darkvision": true }, "text": "Os olhos brilham no escuro. Ignora a penalidade de escuridão, mas nunca recebe Latens no escuro." },
+    { "id": "placas-dorsais", "name": "Placas Dorsais", "grade": "discreta", "modifiers": { "dr": 1 }, "text": "A pele das costas endurece em placas. Redução de Dano 1." },
+    { "id": "febre-constante", "name": "Febre Constante", "grade": "discreta", "modifiers": { "flaskHealBonus": 1 }, "text": "Imune ao frio extremo, e cada Frasco de Sangue recupera 1 de Vida a mais." },
+    { "id": "presas", "name": "Presas", "grade": "evidente", "attack": { "name": "Mordida", "pa": 2, "roll": ["vigor", "instinto"], "damage": [{ "dice": "1d6+1", "type": "Incisium" }], "applyStates": [{ "state": "exsanguis", "minExcess": 2 }] }, "text": "Mordida de 2 PA: Vigor + Instinto contra o Limiar, 1d6+1 Incisium. Com 2+ Excedentes, aplica Exsanguis." },
+    { "id": "pelagem-parcial", "name": "Pelagem Parcial", "grade": "evidente", "modifiers": { "dr": 2, "weaknesses": ["Ignis"] }, "text": "Redução de Dano 2, mas Fraqueza a Ignis." },
+    { "id": "olho-da-testa", "name": "Olho da Testa", "grade": "evidente", "text": "Enxerga criaturas sob Latens, mas -1 dado em Sanidade contra horrores cósmicos." },
+    { "id": "pernas-invertidas", "name": "Pernas Invertidas", "grade": "evidente", "text": "Saltar alcança o dobro e a Corrida move 9 m, mas Desvantagem para se equilibrar." },
+    { "id": "focinho", "name": "Focinho", "grade": "exposta", "modifiers": { "skills": { "presenca": -2 } }, "attack": { "name": "Mordida (Focinho)", "pa": 2, "roll": ["vigor", "instinto"], "damage": [{ "dice": "3d4", "type": "Incisium" }] }, "text": "Mordida de 2 PA: Vigor + Instinto, 3d4 Incisium. -2 dados em Presença." },
+    { "id": "garras-osseas", "name": "Garras Ósseas", "grade": "exposta", "modifiers": { "unarmedDamage": [{ "dice": "2d6", "type": "Incisium" }] }, "text": "Ataques desarmados causam 2d6 Incisium, mas Recarregar custa 2 PA e Desvantagem em Destreza." },
+    { "id": "espinhos-dorsais", "name": "Espinhos Dorsais", "grade": "exposta", "modifiers": { "guardMax": 2 }, "text": "Quem agarrar ou fizer ataque de oportunidade contra o caçador sofre 1d6 Incisium. +2 de Guarda máxima." },
+    { "id": "parasita-visivel", "name": "Parasita Visível", "grade": "exposta", "modifiers": { "skills": { "instinto": 1 } }, "text": "Humanos comuns que o veem recebem Pavor. +1 dado em Instinto." }
+  ]
+}

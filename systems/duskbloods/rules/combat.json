@@ -1,0 +1,119 @@
+{
+  "_comment": "Regras de combate (Capítulo IV e XIII). Todos os custos em PA.",
+  "limiarBase": 3,
+  "pa": {
+    "start": 6,
+    "recovery": 6,
+    "max": 8,
+    "adrenalineMax": 11
+  },
+  "initiative": {
+    "_comment": "Caçadores agem, depois as criaturas. Sem surpresa, um caçador rola Percepção + Investigação contra a dificuldade.",
+    "attribute": "percepcao",
+    "skill": "investigacao",
+    "difficulty": 2,
+    "sides": ["hunters", "creatures"]
+  },
+  "attacks": {
+    "basic": { "agil": 2, "pesada": 3 },
+    "heavyExtraPa": 2,
+    "heavyFixedDamage": 2,
+    "heavyDestabilizePerExcess": 2,
+    "heavyDestabilizeMax": 3,
+    "triggerCost": 1,
+    "unarmed": { "pa": 1, "extraPerUse": 1, "damage": [{ "dice": "1d4", "type": "Contusio" }], "attribute": "agilidade", "skill": "armas-ageis" },
+    "formSkill": {
+      "agil": ["agilidade", "armas-ageis"],
+      "pesada": ["vigor", "armas-pesadas"],
+      "disparo": ["percepcao", "armas-de-fogo"]
+    },
+    "throw": { "attribute": "agilidade", "skill": "destreza", "damage": [{ "dice": "1d4", "type": "Contusio" }], "pa": 1 }
+  },
+  "visceral": {
+    "costFracture": 3,
+    "costStealth": 2,
+    "damageMultiplier": 2,
+    "massive": true,
+    "maxPerTargetPerCombat": 2
+  },
+  "counterShot": {
+    "cost": 4,
+    "attribute": "percepcao",
+    "skill": "armas-de-fogo",
+    "appliesState": "fractura",
+    "ammo": 1,
+    "reactionTimeoutSeconds": 45
+  },
+  "defenses": [
+    { "id": "esquiva", "name": "Esquiva", "pa": 1, "bonus": 1, "consumesGuard": false },
+    { "id": "aparar", "name": "Aparar", "pa": 2, "bonus": 2, "consumesGuard": true, "requiresMelee": true },
+    { "id": "bloquear", "name": "Bloquear", "pa": 3, "bonus": 3, "consumesGuard": true },
+    { "id": "defesa-total", "name": "Defesa Total", "pa": 4, "bonus": 4, "consumesGuard": true, "noAttack": true }
+  ],
+  "cover": [
+    { "id": 0, "name": "Sem cobertura", "bonus": 0 },
+    { "id": 1, "name": "Cobertura leve", "bonus": 1 },
+    { "id": 2, "name": "Cobertura média", "bonus": 2 },
+    { "id": 3, "name": "Cobertura pesada", "bonus": 3 }
+  ],
+  "guard": {
+    "lossOnHit": 1,
+    "lossOnHeavyHit": 2,
+    "lossOnBlockedMiss": 1,
+    "regenPerTurnIfNoLoss": 1,
+    "zeroState": "fractura",
+    "resetOnFractureEnd": true,
+    "resetOnCombatEnd": true
+  },
+  "actions": [
+    { "id": "caminhada", "name": "Caminhada (3 m)", "pa": 1, "group": "Movimento" },
+    { "id": "corrida", "name": "Corrida (6 m)", "pa": 2, "group": "Movimento" },
+    { "id": "disparada", "name": "Disparada (12 m)", "pa": 3, "group": "Movimento" },
+    { "id": "silencio", "name": "Mover-se em silêncio (1,5 m)", "pa": 1, "group": "Movimento" },
+    { "id": "rastejar", "name": "Rastejar (1,5 m)", "pa": 1, "group": "Movimento" },
+    { "id": "nadar", "name": "Nadar (3 m)", "pa": 2, "group": "Movimento" },
+    { "id": "saltar", "name": "Saltar (até 2 m + Vigor)", "pa": 2, "group": "Movimento" },
+    { "id": "escalar", "name": "Escalar (até 8 m + Agilidade)", "pa": 2, "group": "Movimento" },
+    { "id": "levantar", "name": "Levantar-se", "pa": 2, "group": "Movimento", "removesState": "prostratus" },
+    { "id": "sacar", "name": "Sacar arma/Canalizador/item", "pa": 1, "group": "Interação" },
+    { "id": "guardar", "name": "Guardar arma/Canalizador/item", "pa": 1, "group": "Interação" },
+    { "id": "trocar-arma", "name": "Trocar de arma", "pa": 2, "group": "Interação" },
+    { "id": "recarregar", "name": "Recarregar", "pa": 1, "group": "Interação" },
+    { "id": "usar-item", "name": "Usar um item", "pa": 1, "group": "Interação" },
+    { "id": "interagir", "name": "Interagir com o cenário", "pa": 1, "group": "Interação" },
+    { "id": "arremessar", "name": "Arremessar um objeto", "pa": 1, "group": "Interação" },
+    { "id": "ajudar-levantar", "name": "Ajudar aliado a se levantar", "pa": 1, "group": "Interação" },
+    { "id": "estabilizar", "name": "Estabilizar aliado Morrendo", "pa": 2, "group": "Interação", "roll": ["intelecto", "medicina"], "difficulty": 2 },
+    { "id": "estudar", "name": "Estudar uma criatura", "pa": 2, "group": "Interação", "roll": ["intelecto", "ocultismo"], "difficulty": 2 },
+    { "id": "esconder", "name": "Esconder-se", "pa": 3, "group": "Interação", "appliesState": "latens" },
+    { "id": "agarrar", "name": "Agarrar", "pa": 4, "group": "Interação", "roll": ["vigor", "resiliencia"] },
+    { "id": "interpor", "name": "Interpor-se (reação)", "pa": 2, "group": "Reação" }
+  ],
+  "flask": { "pa": 1, "heal": 4, "restoresGuardForSanctifer": 1 },
+  "range": {
+    "melee": 1.5,
+    "revolver": 20,
+    "revolverLongDisadvantage": 40,
+    "crossbow": 30,
+    "arcane": 15,
+    "thrown": 10
+  },
+  "creatureTiers": [
+    { "id": "fraca", "name": "Fraca", "limiar": 1, "pa": 3, "weight": 1, "dice": [5, 7, 9], "ecos": "5-15" },
+    { "id": "padrao", "name": "Padrão", "limiar": 2, "pa": 3, "weight": 3, "dice": [7, 9, 11], "ecos": "15-40" },
+    { "id": "elite", "name": "Elite", "limiar": 3, "pa": 5, "weight": 8, "dice": [9, 11, 13], "ecos": "50-120" },
+    { "id": "chefe", "name": "Chefe", "limiar": 3, "pa": 7, "weight": 20, "dice": [9, 11, 13], "maxAttacksPerTurn": 2, "ecos": "200-500" },
+    { "id": "ascendente", "name": "Ascendente", "limiar": 5, "pa": 7, "weight": 20, "dice": [11, 13, 15], "ecos": "200-500" }
+  ],
+  "creatureActions": { "move": 1, "basic": 2, "heavy": 3, "ability": 3 },
+  "bossPhase": { "state": "postura-elevada", "limiarBonus": 1, "rounds": 2 },
+  "encounter": { "capacityPerHunter": 4, "levels": [
+    { "name": "Tranquilo", "upTo": 0.75 }, { "name": "Padrão", "upTo": 1.0 }, { "name": "Difícil", "upTo": 1.5 }, { "name": "Mortal", "upTo": 99 } ] },
+  "dying": {
+    "state": "morrendo",
+    "roll": ["vigor", "resiliencia"],
+    "candles": 3,
+    "wakeSuccesses": 3,
+    "parasiteDementia": 2
+  }
+}

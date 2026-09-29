@@ -1,0 +1,26 @@
+{
+  "id": "duskbloods",
+  "title": "DuskBloods",
+  "version": "1.0.0",
+  "description": "Horror cósmico vitoriano. Pool de D6, Limiar Universal, Truque da Oficina do Caçador.",
+  "author": "@gabriell_jake",
+  "actorTypes": {
+    "hunter": "Caçador",
+    "creature": "Criatura"
+  },
+  "playerActorType": "hunter",
+  "rules": ["core", "attributes", "classes", "combat", "damage-types", "states", "dementia", "humanitas", "discernment", "between"],
+  "compendium": {
+    "weapons": "Armas da Oficina (TOC)",
+    "revolvers": "Revólveres",
+    "channelers": "Canalizadores",
+    "arcana": "Arcanos",
+    "marks": "Marcas do Caçador",
+    "talents": "Talentos",
+    "mutations": "Mutações",
+    "items": "Itens e Materiais",
+    "bestiary": "Bestiário",
+    "ascendants": "Ascendentes",
+    "tables": "Tabelas Aleatórias"
+  }
+}

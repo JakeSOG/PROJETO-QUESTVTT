@@ -1,0 +1,46 @@
+{
+  "entries": [
+    { "id": "achados", "name": "Tabela rápida de achados", "dice": "1d6", "results": [
+      { "range": [1, 1], "text": "Nada. Alguém chegou antes." },
+      { "range": [2, 2], "text": "5 a 30 Ecos de Sangue." },
+      { "range": [3, 3], "text": "5 balas de munição comum." },
+      { "range": [4, 4], "text": "1 Frasco de Sangue." },
+      { "range": [5, 5], "text": "1 material comum de Marca." },
+      { "range": [6, 6], "text": "Algo raro, à escolha do Mestre." } ] },
+    { "id": "encontros-iniciais", "name": "Encontros (Ignorante/Desperto)", "dice": "1d8", "results": [
+      { "range": [1, 1], "text": "1d4 Feras Encolhidas farejando sangue." },
+      { "range": [2, 2], "text": "Um Olho Aberto rastejando atrás de um lampião." },
+      { "range": [3, 3], "text": "2 Retalhos chorando num beco sem saída." },
+      { "range": [4, 4], "text": "Um Sussurrante onde a luz não alcança." },
+      { "range": [5, 5], "text": "Uma Fera de Duas Cabeças num pátio." },
+      { "range": [6, 6], "text": "Um Colecionador de Retinas com jaleco de Mornvein." },
+      { "range": [7, 7], "text": "Um Caçador Renegado que ainda lembra do próprio nome." },
+      { "range": [8, 8], "text": "Uma Maré Rasteira junto a um cais inundado." } ] },
+    { "id": "mutacao-oculta", "name": "Mutação Oculta", "dice": "1d4", "results": [
+      { "range": [1, 1], "text": "Veias Escuras" }, { "range": [2, 2], "text": "Marcas Estelares" }, { "range": [3, 3], "text": "Faro de Sangue" }, { "range": [4, 4], "text": "Noites em Claro" } ] },
+    { "id": "mutacao-discreta", "name": "Mutação Discreta", "dice": "1d4", "results": [
+      { "range": [1, 1], "text": "Unhas Negras" }, { "range": [2, 2], "text": "Olhos de Fera" }, { "range": [3, 3], "text": "Placas Dorsais" }, { "range": [4, 4], "text": "Febre Constante" } ] },
+    { "id": "mutacao-evidente", "name": "Mutação Evidente", "dice": "1d4", "results": [
+      { "range": [1, 1], "text": "Presas" }, { "range": [2, 2], "text": "Pelagem Parcial" }, { "range": [3, 3], "text": "Olho da Testa" }, { "range": [4, 4], "text": "Pernas Invertidas" } ] },
+    { "id": "mutacao-exposta", "name": "Mutação Exposta", "dice": "1d4", "results": [
+      { "range": [1, 1], "text": "Focinho" }, { "range": [2, 2], "text": "Garras Ósseas" }, { "range": [3, 3], "text": "Espinhos Dorsais" }, { "range": [4, 4], "text": "Parasita Visível" } ] },
+    { "id": "rumores", "name": "Rumores e ganchos", "dice": "1d10", "results": [
+      { "range": [1, 1], "text": "Mercant: um elevador de manutenção da Antiga Yharnam é encontrado ligado, sozinho." },
+      { "range": [2, 2], "text": "Mercant: um Doutor da Praga desaparece em Varsuke depois de dizer que entendeu os padrões de Vietro." },
+      { "range": [3, 3], "text": "Cindergate: uma fábrica de Frascos produz acima do esperado na semana em que trabalhadores somem." },
+      { "range": [4, 4], "text": "Cindergate: o movimento operário quer provar que um lote de Frascos foi contaminado de propósito." },
+      { "range": [5, 5], "text": "Alderfen: um altar antigo, esquecido havia gerações, recebe oferendas frescas outra vez." },
+      { "range": [6, 6], "text": "Alderfen: uma criança do pântano repete em sonho as teorias não publicadas de Vietro." },
+      { "range": [7, 7], "text": "Saltmere: um navio retorna sem tripulação, com o diário de bordo completo até a última noite." },
+      { "range": [8, 8], "text": "Saltmere: contrabandistas se recusam a atracar num trecho específico da costa." },
+      { "range": [9, 9], "text": "Crownhollow: um nobre faz perguntas específicas demais sobre a Praga." },
+      { "range": [10, 10], "text": "Crownhollow: um caçador reconhecido é visto publicamente na capital." } ] },
+    { "id": "perigos", "name": "Perigos do ambiente", "dice": "1d6", "results": [
+      { "range": [1, 1], "text": "Queda: cada 3 m além dos primeiros 3 causa 1d6 Contusio (Agilidade + Acrobacia Normal reduz à metade)." },
+      { "range": [2, 2], "text": "Escuridão total: Desvantagem em ataques e Investigação." },
+      { "range": [3, 3], "text": "Fogo: 1d6 Ignis e Ardens." },
+      { "range": [4, 4], "text": "Água funda: prende a respiração por rodadas = Vigor; depois 1d6 Contusio por rodada." },
+      { "range": [5, 5], "text": "Miasma da Praga: Vigor + Resiliência por cena; falha = Corruptus." },
+      { "range": [6, 6], "text": "Frio extremo: Vigor + Resiliência a cada hora; falha = Torpor." } ] }
+  ]
+}

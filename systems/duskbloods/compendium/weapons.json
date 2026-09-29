@@ -1,0 +1,132 @@
+{
+  "_comment": "Armas TOC. category: agil | pesada | disparo. hands: 1 | 2. damage = Dano Base (multiplicado por Crítico/Visceral). trick = Dano de Truque fixo (NUNCA multiplicado). effects: efeitos automáticos reconhecidos pelo motor.",
+  "entries": [
+    { "id": "lamina-simples", "name": "Lâmina Simples", "basic": true, "slots": 2, "price": 150,
+      "forms": {
+        "padrao": { "name": "Espada Curta", "category": "agil", "hands": 1, "damage": [{ "dice": "1d6", "type": "Incisium" }] },
+        "truque": { "name": "Espada Longa", "category": "pesada", "hands": 2, "damage": [{ "dice": "1d6", "type": "Incisium" }], "trick": [{ "dice": "2d4", "type": "Incisium" }] } },
+      "text": "Um pino na guarda solta um segundo segmento de lâmina guardado dentro do cabo oco. Sem ornamento, sem nome gravado." },
+    { "id": "cassetete-de-ferro", "name": "Cassetete de Ferro", "basic": true, "slots": 2, "price": 150,
+      "forms": {
+        "padrao": { "name": "Cassetete", "category": "agil", "hands": 1, "damage": [{ "dice": "1d6", "type": "Contusio" }] },
+        "truque": { "name": "Maça de Guerra", "category": "pesada", "hands": 2, "damage": [{ "dice": "1d6", "type": "Contusio" }], "trick": [{ "dice": "2d4", "type": "Contusio" }] } },
+      "text": "Placas de ferro se abrem como pétalas e formam a cabeça flangeada de uma maça." },
+    { "id": "lanca-curta", "name": "Lança Curta", "basic": true, "slots": 2, "price": 150,
+      "forms": {
+        "padrao": { "name": "Lança Curta", "category": "agil", "hands": 1, "damage": [{ "dice": "1d6", "type": "Penetrabile" }] },
+        "truque": { "name": "Pique Longo", "category": "pesada", "hands": 2, "damage": [{ "dice": "1d6", "type": "Penetrabile" }], "trick": [{ "dice": "2d4", "type": "Penetrabile" }] } },
+      "text": "A haste telescópica se estende numa sequência de cliques até virar um pique mais alto que um homem." },
+    { "id": "machadinha-de-caca", "name": "Machadinha de Caça", "basic": true, "slots": 2, "price": 150,
+      "forms": {
+        "padrao": { "name": "Machadinha", "category": "agil", "hands": 1, "damage": [{ "dice": "1d6", "type": "Incisium" }] },
+        "truque": { "name": "Machado de Dois Gumes", "category": "pesada", "hands": 2, "damage": [{ "dice": "1d6", "type": "Incisium" }], "trick": [{ "dice": "2d4", "type": "Contusio" }] } },
+      "text": "A segunda lâmina gira meia volta e se encaixa oposta à primeira. Um golpe de machado se torna dois." },
+    { "id": "facas-gemeas", "name": "Facas Gêmeas", "basic": true, "slots": 1, "price": 150,
+      "forms": {
+        "padrao": { "name": "Faca Única", "category": "agil", "hands": 1, "damage": [{ "dice": "1d6", "type": "Incisium" }] },
+        "truque": { "name": "Facas Acopladas por Corrente", "category": "pesada", "hands": 2, "damage": [{ "dice": "1d6", "type": "Incisium" }], "trick": [{ "dice": "2d4", "type": "Incisium" }] } },
+      "text": "Uma corrente escondida na manga solta a segunda lâmina." },
+
+    { "id": "lamina-sepulcral", "name": "Lâmina Sepulcral", "slots": 2, "price": 400,
+      "forms": {
+        "padrao": { "name": "Espada Curta", "category": "agil", "hands": 1, "damage": [{ "dice": "1d8", "type": "Incisium" }] },
+        "truque": { "name": "Espada Pesada", "category": "pesada", "hands": 2, "damage": [{ "dice": "1d8", "type": "Incisium" }], "trick": [{ "dice": "2d4", "type": "Incisium" }] } },
+      "text": "Sua graciosidade pode ser compensada transformando-se em uma máquina de guerra." },
+    { "id": "florete-confessional", "name": "Florete Confessional", "slots": 2, "price": 400,
+      "forms": {
+        "padrao": { "name": "Florete", "category": "agil", "hands": 1, "damage": [{ "dice": "1d6", "type": "Penetrabile" }] },
+        "truque": { "name": "Cruz Serrilhada", "category": "pesada", "hands": 2, "damage": [{ "dice": "1d6", "type": "Penetrabile" }], "trick": [{ "dice": "2d4", "type": "Umbra" }] } },
+      "text": "Nem toda absolvição vem em palavras. Algumas vêm em aço." },
+    { "id": "revolver-cutelo", "name": "Revólver-Cutelo", "slots": 2, "price": 400,
+      "forms": {
+        "padrao": { "name": "Revólver", "category": "disparo", "hands": 1, "ranged": true, "ammoCapacity": 6, "damage": [{ "dice": "1d6", "type": "Penetrabile" }] },
+        "truque": { "name": "Cutelo Serrilhado", "category": "pesada", "hands": 2, "damage": [{ "dice": "1d6", "type": "Incisium" }], "trick": [{ "dice": "2d4", "type": "Cruor" }], "text": "Enquanto for cutelo, a arma não dispara." } },
+      "text": "Primeiro a pergunta. Depois, se necessário, a resposta." },
+    { "id": "bengala-guilhotina", "name": "Bengala-Guilhotina", "slots": 2, "price": 400,
+      "forms": {
+        "padrao": { "name": "Bengala", "category": "agil", "hands": 1, "damage": [{ "dice": "1d6", "type": "Contusio" }] },
+        "truque": { "name": "Foice Dupla", "category": "pesada", "hands": 2, "damage": [{ "dice": "1d6", "type": "Incisium" }], "trick": [{ "dice": "2d4", "type": "Penetrabile" }] } },
+      "text": "Educada o suficiente para entrar em qualquer salão. Afiada o suficiente para nunca sair de um." },
+    { "id": "martelo-machadinha-gemea", "name": "Martelo-Machadinha Gêmea", "slots": 3, "price": 400,
+      "forms": {
+        "padrao": { "name": "Martelo de Guerra", "category": "pesada", "hands": 2, "damage": [{ "dice": "2d6", "type": "Contusio" }] },
+        "truque": { "name": "Machadinhas Gêmeas", "category": "agil", "hands": 1, "dual": true, "damage": [{ "dice": "1d6", "type": "Incisium" }], "effects": { "secondAttackDiscount": 1 }, "text": "O segundo ataque no mesmo turno custa -1 PA (mínimo 1). Troca o Dano de Truque por desconto de PA." } },
+      "text": "Um só golpe pode quebrar ossos. Dois, mais rápidos, quebram a vontade de continuar em pé." },
+    { "id": "lamina-ceifadora", "name": "Lâmina Ceifadora", "slots": 2, "price": 400,
+      "forms": {
+        "padrao": { "name": "Espada Longa", "category": "agil", "hands": 1, "damage": [{ "dice": "1d6", "type": "Incisium" }] },
+        "truque": { "name": "Foice de Guerra", "category": "pesada", "hands": 2, "damage": [{ "dice": "1d6", "type": "Incisium" }], "trick": [{ "dice": "2d4", "type": "Incisium" }] } },
+      "text": "Vira instrumento de colheita, mas o que colhe não é grão." },
+    { "id": "chicote-de-correntes", "name": "Chicote de Correntes", "slots": 2, "price": 400,
+      "forms": {
+        "padrao": { "name": "Chicote", "category": "agil", "hands": 1, "damage": [{ "dice": "1d6", "type": "Penetrabile" }] },
+        "truque": { "name": "Mangual de Elo Travado", "category": "pesada", "hands": 2, "damage": [{ "dice": "1d6", "type": "Penetrabile" }], "trick": [{ "dice": "2d4", "type": "Contusio" }] } },
+      "text": "O mesmo instrumento que açoita agora esmaga." },
+    { "id": "serra-ritual", "name": "Serra Ritual", "slots": 3, "price": 400,
+      "forms": {
+        "padrao": { "name": "Serra de Mão", "category": "agil", "hands": 1, "damage": [{ "dice": "1d6", "type": "Incisium" }] },
+        "truque": { "name": "Serra Motorizada", "category": "pesada", "hands": 2, "damage": [{ "dice": "1d6", "type": "Incisium" }], "effects": { "onHitState": "exsanguis" }, "text": "Sem Dano de Truque. Todo acerto aplica Exsanguis automaticamente." } },
+      "text": "Dizem que o som dela foi a última coisa que muitos caçadores da Igreja ouviram." },
+    { "id": "lamina-retratil-de-gancho", "name": "Lâmina Retrátil de Gancho", "slots": 3, "price": 400,
+      "forms": {
+        "padrao": { "name": "Gancho Curto", "category": "agil", "hands": 1, "damage": [{ "dice": "1d6", "type": "Penetrabile" }] },
+        "truque": { "name": "Alabarda de Gancho", "category": "pesada", "hands": 2, "damage": [{ "dice": "1d6", "type": "Penetrabile" }], "trick": [{ "dice": "2d4", "type": "Penetrabile" }], "effects": { "reach": 3 }, "text": "Alcance de 3 metros." } },
+      "text": "Usada originalmente para puxar corpos de esgotos estreitos." },
+    { "id": "garras-enxertadas", "name": "Garras Enxertadas", "slots": 2, "price": 400,
+      "forms": {
+        "padrao": { "name": "Garras Curtas", "category": "agil", "hands": 1, "damage": [{ "dice": "1d6", "type": "Incisium" }] },
+        "truque": { "name": "Garras Profundas", "category": "pesada", "hands": 2, "damage": [{ "dice": "1d6", "type": "Incisium" }], "trick": [{ "dice": "2d6", "type": "Incisium" }], "effects": { "triggerSelfDamage": { "amount": 1, "type": "Contusio" } }, "text": "Acionar o Gatilho causa 1 de dano Contusio no próprio usuário." } },
+      "text": "Enxertadas, não empunhadas." },
+    { "id": "escudo-lamina-dobravel", "name": "Escudo-Lâmina Dobrável", "slots": 2, "price": 400,
+      "forms": {
+        "padrao": { "name": "Lâmina Curta", "category": "agil", "hands": 1, "damage": [{ "dice": "1d6", "type": "Incisium" }] },
+        "truque": { "name": "Escudo de Bordas Afiadas", "category": "pesada", "hands": 2, "damage": [{ "dice": "1d6", "type": "Incisium" }], "effects": { "limiarBonus": 2 }, "text": "Sem Dano de Truque. +2 ao próprio Limiar enquanto nesta forma." } },
+      "text": "A única arma da Oficina desenhada para quem pretende sobreviver à noite." },
+    { "id": "bacamarte-baioneta", "name": "Bacamarte-Baioneta", "slots": 2, "price": 400,
+      "forms": {
+        "padrao": { "name": "Bacamarte Curto", "category": "disparo", "hands": 1, "ranged": true, "ammoCapacity": 2, "damage": [{ "dice": "1d6", "type": "Penetrabile" }] },
+        "truque": { "name": "Alabarda de Fogo", "category": "pesada", "hands": 2, "damage": [{ "dice": "1d6", "type": "Penetrabile" }], "trick": [{ "dice": "2d4", "type": "Incisium" }] } },
+      "text": "Para quando a bala não é suficiente e não há tempo de recarregar." },
+    { "id": "incensario-de-varsuke", "name": "Incensário de Varsuke", "slots": 2, "price": 400,
+      "forms": {
+        "padrao": { "name": "Lanterna de Vigília", "category": "agil", "hands": 1, "damage": [{ "dice": "1d6", "type": "Contusio" }], "effects": { "light": 6 }, "text": "Ilumina 6 m, dispensando lampião." },
+        "truque": { "name": "Incensário Funerário", "category": "pesada", "hands": 2, "damage": [{ "dice": "1d6", "type": "Contusio" }], "trick": [{ "dice": "2d4", "type": "Umbra" }], "text": "A chama se apaga: a arma deixa de iluminar." } },
+      "text": "Em Varsuke, os mortos ainda servem. Alguns como memória. Outros como fumaça." },
+    { "id": "lamina-astrolabica", "name": "Lâmina Astrolábica", "slots": 2, "price": 400,
+      "forms": {
+        "padrao": { "name": "Espada Fina", "category": "agil", "hands": 1, "damage": [{ "dice": "1d6", "type": "Incisium" }] },
+        "truque": { "name": "Roda de Anéis", "category": "pesada", "hands": 2, "damage": [{ "dice": "1d6", "type": "Incisium" }], "trick": [{ "dice": "2d4", "type": "Mentallis" }], "effects": { "onExcessState": { "min": 2, "state": "torpor", "rounds": 1 } }, "text": "Com 2 ou mais Sucessos Excedentes, o alvo recebe Torpor por 1 turno." } },
+      "text": "O que acontece quando alguém tenta tocar a música do céu." },
+    { "id": "cutelo-de-seiva", "name": "Cutelo de Seiva", "slots": 2, "price": 400,
+      "forms": {
+        "padrao": { "name": "Facão", "category": "agil", "hands": 1, "damage": [{ "dice": "1d6", "type": "Incisium" }] },
+        "truque": { "name": "Cutelo Longo", "category": "pesada", "hands": 2, "damage": [{ "dice": "1d6", "type": "Incisium" }], "trick": [{ "dice": "2d4", "type": "Veneficium" }], "effects": { "onExcessState": { "min": 2, "state": "corruptus" } }, "text": "Com 2 ou mais Sucessos Excedentes, aplica Corruptus." } },
+      "text": "O pântano não envenena ninguém. Ele só devolve o que recebe." },
+    { "id": "martelo-galvanico", "name": "Martelo Galvânico", "slots": 2, "price": 400,
+      "forms": {
+        "padrao": { "name": "Martelo de Ferreiro", "category": "agil", "hands": 1, "damage": [{ "dice": "1d6", "type": "Contusio" }] },
+        "truque": { "name": "Martelo de Bobinas", "category": "pesada", "hands": 2, "damage": [{ "dice": "1d6", "type": "Contusio" }], "trick": [{ "dice": "2d4", "type": "Fulmen" }], "effects": { "firstHitAfterSwitchState": "fulguratio" }, "text": "O primeiro acerto após cada troca para esta forma aplica Fulguratio." } },
+      "text": "Ysolde chamou de centelha azul. Os armeiros da Oficina chamam de problema resolvido." },
+    { "id": "pa-de-fornalheiro", "name": "Pá de Fornalheiro", "slots": 2, "price": 400,
+      "forms": {
+        "padrao": { "name": "Pá de Carvão", "category": "agil", "hands": 1, "damage": [{ "dice": "1d6", "type": "Contusio" }] },
+        "truque": { "name": "Pá em Brasa", "category": "pesada", "hands": 2, "damage": [{ "dice": "1d6", "type": "Contusio" }], "trick": [{ "dice": "2d4", "type": "Ignis" }], "effects": { "splashTrick": true }, "text": "Cada acerto espalha brasas: uma segunda criatura a até 1,5 m do alvo sofre o Dano de Truque (2d4 Ignis)." } },
+      "text": "A mesma ferramenta que alimenta o fogo também sabe espalhá-lo." },
+
+    { "id": "punho-de-eleanor", "name": "Punho de Eleanor", "legendary": true, "slots": 1,
+      "forms": {
+        "padrao": { "name": "Pistola de Mão", "category": "disparo", "hands": 1, "ranged": true, "ammoCapacity": 6, "countsAsRevolver": true, "damage": [{ "dice": "1d6", "type": "Penetrabile" }], "text": "Conta como revólver: pode executar Contra-Tiro e Tiro de Abate." },
+        "truque": { "name": "Adaga de Execução", "category": "agil", "hands": 1, "damage": [{ "dice": "1d6", "type": "Incisium" }], "effects": { "visceralDiscount": 1 }, "text": "Ataque Visceral com esta forma custa 1 PA a menos (mínimo 1)." } },
+      "text": "Uma prece curta, dita à queima-roupa. Sem Dano de Truque." },
+    { "id": "ferreo-de-henryk", "name": "Férreo de Henryk", "legendary": true, "slots": 3,
+      "forms": {
+        "padrao": { "name": "Espada", "category": "agil", "hands": 1, "damage": [{ "dice": "1d8", "type": "Incisium" }] },
+        "truque": { "name": "Machado Pesado", "category": "pesada", "hands": 2, "damage": [{ "dice": "1d8", "type": "Incisium" }], "trick": [{ "dice": "2d4+1", "type": "Contusio" }] } },
+      "text": "Uma espada que recebe na ponta a cabeça de um machado: brutal e instável." },
+    { "id": "besta-lua-de-prata", "name": "Besta Lua de Prata", "legendary": true, "slots": 2,
+      "forms": {
+        "padrao": { "name": "Besta de Longo Alcance", "category": "disparo", "hands": 1, "ranged": true, "ammoCapacity": 1, "ammoItem": "virotes", "range": 30, "damage": [{ "dice": "2d6", "type": "Penetrabile" }] },
+        "truque": { "name": "Baioneta de Prata", "category": "pesada", "hands": 2, "damage": [{ "dice": "2d6", "type": "Penetrabile" }], "trick": [{ "dice": "2d4", "type": "Penetrabile" }] } },
+      "text": "Uma antiga arma associada aos primeiros caçadores de Yharnam." }
+  ]
+}

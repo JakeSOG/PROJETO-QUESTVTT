@@ -1,0 +1,12 @@
+{
+  "_comment": "Canalizadores: sempre Uma Mão, não são afetados pelo TOC, +1 Espaço de Magia. effects reconhecidos: paDiscount {arcane, amount}, flaskDiscount {academy, amount}, hpDiscount {academy, amount}.",
+  "entries": [
+    { "id": "canalizador-de-iniciado", "name": "Canalizador de Iniciado", "kind": "Cajado ou Selo", "academy": null, "price": 100, "text": "Nenhum efeito único. Não carrega história, nem nome, nem dono anterior. Ainda." },
+    { "id": "amygdala-karhul", "name": "Amygdala Kar'hul", "kind": "Cajado", "academy": "byerghwaith", "price": 350, "effects": { "paDiscount": { "arcane": "oculus-tenebrae", "amount": 1 } }, "text": "Oculus Tenebrae custa 1 PA a menos." },
+    { "id": "selo-do-olho-cadente", "name": "Selo do Olho Cadente", "kind": "Selo", "academy": "byerghwaith", "price": 350, "text": "Uma vez por cena, o próximo Arcano de Byerghwaith recebe Vantagem (+1D6)." },
+    { "id": "valentia-de-gescoine", "name": "Valentia de Gescoine", "kind": "Cajado", "academy": "mornvein", "price": 350, "effects": { "flaskDiscount": { "academy": "mornvein", "amount": 1 } }, "text": "Reduz em 1 o custo de Frasco de Sangue dos Arcanos de Mornvein." },
+    { "id": "selo-de-sangue-selado", "name": "Selo de Sangue Selado", "kind": "Selo", "academy": "mornvein", "price": 350, "text": "Curar um aliado com Arcano de Mornvein recupera 1 PA." },
+    { "id": "cajado-de-osso-fendido", "name": "Cajado de Osso Fendido", "kind": "Cajado", "academy": "thumeria", "price": 350, "effects": { "hpDiscount": { "academy": "thumeria", "amount": 1 } }, "text": "Reduz em 1 o custo de Vida própria dos Arcanos de Thumeria." },
+    { "id": "selo-visceral", "name": "Selo Visceral", "kind": "Selo", "academy": "thumeria", "price": 350, "text": "Uma vez por cena, ignora o custo de Dementia de um Arcano de Thumeria." }
+  ]
+}
