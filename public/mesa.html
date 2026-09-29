@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuestVTT — Mesa</title>
+  <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/mesa.css">
+</head>
+<body class="mesa">
+  <div id="loading" class="loading-screen"><div class="candle">🕯</div><p>Acendendo as velas…</p></div>
+
+  <div id="app" class="hidden">
+    <!-- Mapa -->
+    <main id="board" aria-label="Mapa"></main>
+    <div id="dementiaFx" class="dementia-fx" aria-hidden="true"></div>
+
+    <!-- Barra superior: nome da cena e navegação -->
+    <header id="topbar">
+      <span id="sceneTitle" class="scene-title"></span>
+      <span id="sceneBadge" class="badge hidden"></span>
+    </header>
+
+    <!-- Ferramentas do mapa -->
+    <nav id="tools" aria-label="Ferramentas"></nav>
+    <div id="toolOptions" class="tool-options hidden"></div>
+
+    <!-- Jogadores online -->
+    <aside id="players" aria-label="Jogadores"></aside>
+
+    <!-- Barra de ações rápidas do caçador -->
+    <div id="hotbar"></div>
+
+    <!-- Barra lateral -->
+    <aside id="sidebar">
+      <nav id="tabs" role="tablist"></nav>
+      <section id="panels"></section>
+    </aside>
+    <button id="sidebarToggle" class="icon" title="Recolher barra lateral">⟩</button>
+
+    <div id="windows"></div>
+    <div id="handout" class="handout hidden"></div>
+    <div id="reaction" class="reaction hidden"></div>
+    <div id="audioUnlock" class="audio-unlock hidden">🔊 Clique aqui para ativar o som da mesa</div>
+    <div id="disconnected" class="disconnected hidden">Conexão perdida — reconectando…</div>
+  </div>
+  <div id="toasts"></div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script type="module" src="/js/mesa/main.js"></script>
+</body>
+</html>

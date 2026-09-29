@@ -1,0 +1,122 @@
+/* QuestVTT — tema gótico vitoriano: sangue seco, preto, bronze envelhecido, papel antigo. */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=IM+Fell+English:ital@0;1&family=Crimson+Text:wght@400;600&display=swap');
+
+:root {
+  --ink: #0b0908;
+  --ink-2: #14100d;
+  --ink-3: #1d1712;
+  --ink-4: #2a211a;
+  --line: #3b2e22;
+  --line-2: #5a4632;
+  --bronze: #c9a45c;
+  --bronze-2: #a07a3c;
+  --bronze-dim: #7a6040;
+  --blood: #8b1a1a;
+  --blood-2: #b22a2a;
+  --blood-dark: #4a0c0e;
+  --paper: #e8dcc0;
+  --paper-2: #d4c4a0;
+  --paper-dim: #a89878;
+  --muted: #8a7b66;
+  --ok: #6b9a3a;
+  --warn: #d4a017;
+  --info: #5f8fb8;
+  --success: #d33a3a;
+  --font-head: 'Cinzel', 'Trajan Pro', 'Palatino Linotype', 'Book Antiqua', serif;
+  --font-body: 'Crimson Text', 'IM Fell English', 'Palatino Linotype', 'Book Antiqua', Georgia, serif;
+  --font-fell: 'IM Fell English', 'Palatino Linotype', Georgia, serif;
+  --radius: 4px;
+  --shadow: 0 8px 30px rgba(0,0,0,.65);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.4;
+}
+h1, h2, h3, h4 { font-family: var(--font-head); color: var(--bronze); letter-spacing: .04em; margin: 0 0 .5em; font-weight: 500; }
+a { color: var(--bronze); }
+b, strong { color: var(--paper); }
+hr { border: 0; border-top: 1px solid var(--line); margin: 10px 0; }
+::selection { background: var(--blood); color: var(--paper); }
+
+/* Barras de rolagem discretas */
+* { scrollbar-width: thin; scrollbar-color: var(--line-2) transparent; }
+*::-webkit-scrollbar { width: 8px; height: 8px; }
+*::-webkit-scrollbar-thumb { background: var(--line-2); border-radius: 4px; }
+
+/* Controles */
+button, .btn {
+  font-family: var(--font-head);
+  font-size: 13px;
+  letter-spacing: .03em;
+  color: var(--paper);
+  background: linear-gradient(#2a211a, #1a1410);
+  border: 1px solid var(--line-2);
+  border-radius: var(--radius);
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: border-color .15s, background .15s, color .15s;
+  white-space: nowrap;
+}
+button:hover:not(:disabled) { border-color: var(--bronze); color: #fff; }
+button:active:not(:disabled) { transform: translateY(1px); }
+button:disabled { opacity: .45; cursor: not-allowed; }
+button.primary { background: linear-gradient(#8b1a1a, #5a0f10); border-color: #b22a2a; }
+button.primary:hover:not(:disabled) { background: linear-gradient(#a02020, #6a1214); }
+button.ghost { background: transparent; border-color: transparent; }
+button.ghost:hover:not(:disabled) { border-color: var(--line-2); }
+button.small { font-size: 11px; padding: 2px 6px; }
+button.icon { padding: 3px 6px; min-width: 28px; }
+button.active, button[aria-pressed="true"] { border-color: var(--bronze); color: var(--bronze); background: #2e2418; }
+
+input, select, textarea {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--paper);
+  background: #0f0c0a;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 4px 7px;
+  min-width: 0;
+}
+input:focus, select:focus, textarea:focus, button:focus-visible { outline: 1px solid var(--bronze); outline-offset: 0; border-color: var(--bronze-2); }
+input[type="number"] { width: 64px; }
+input[type="checkbox"], input[type="radio"] { accent-color: var(--blood-2); }
+input[type="range"] { accent-color: var(--bronze); padding: 0; }
+input[type="color"] { padding: 0; width: 34px; height: 26px; }
+textarea { width: 100%; resize: vertical; min-height: 60px; }
+label { color: var(--paper-2); }
+
+.muted { color: var(--muted); }
+.small { font-size: 13px; }
+.row { display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+.col { display: flex; flex-direction: column; gap: 6px; }
+.grow { flex: 1; min-width: 0; }
+.right { margin-left: auto; }
+.hidden { display: none !important; }
+.center { text-align: center; }
+.danger { color: var(--blood-2); }
+.gold { color: var(--bronze); }
+
+/* Ornamento de moldura */
+.frame {
+  background: radial-gradient(ellipse at top, #1f1813 0%, #120e0b 70%);
+  border: 1px solid var(--line-2);
+  box-shadow: inset 0 0 0 1px #000, inset 0 0 40px rgba(0,0,0,.6), var(--shadow);
+  border-radius: 6px;
+}
+.ornament { display: flex; align-items: center; gap: 10px; color: var(--bronze-dim); font-family: var(--font-head); font-size: 12px; letter-spacing: .3em; text-transform: uppercase; }
+.ornament::before, .ornament::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--bronze-dim), transparent); }
+
+/* Toasts */
+#toasts { position: fixed; top: 14px; left: 50%; transform: translateX(-50%); z-index: 9999; display: flex; flex-direction: column; gap: 6px; pointer-events: none; }
+.toast { background: #1a1410f0; border: 1px solid var(--line-2); border-left: 3px solid var(--bronze); padding: 8px 14px; border-radius: 4px; box-shadow: var(--shadow); font-size: 15px; max-width: 520px; animation: toastIn .2s ease-out; }
+.toast.error { border-left-color: var(--blood-2); }
+.toast.ok { border-left-color: var(--ok); }
+@keyframes toastIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }

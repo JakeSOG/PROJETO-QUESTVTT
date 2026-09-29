@@ -487,7 +487,7 @@ function createModel(system) {
           if (Array.isArray(v)) out.channelers = v.filter(c => IDX().channelers[c.ref]).map(c => ({ uid: c.uid || uid(), ref: c.ref, afinacao: clamp(int(c.afinacao, 0), 0, gm ? 10 : 3) }));
           break;
         case 'equip':
-          out.equip = { main: v.main ?? d.equip.main, off: v.off ?? d.equip.off, offStowed: !!(v.offStowed ?? d.equip.offStowed), mainStowed: !!(v.mainStowed ?? d.equip.mainStowed) };
+          out.equip = { main: 'main' in v ? v.main : d.equip.main, off: 'off' in v ? v.off : d.equip.off, offStowed: !!(v.offStowed ?? d.equip.offStowed), mainStowed: !!(v.mainStowed ?? d.equip.mainStowed) };
           break;
         case 'inventory':
           if (Array.isArray(v)) out.inventory = v.slice(0, 200).map(i => ({

@@ -1,0 +1,23 @@
+body.login {
+  min-height: 100%;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background:
+    radial-gradient(ellipse at 50% 30%, rgba(139,26,26,.18), transparent 60%),
+    radial-gradient(ellipse at 50% 120%, rgba(201,164,92,.08), transparent 60%),
+    var(--ink);
+}
+.login-card { width: min(420px, 100%); padding: 28px 26px 22px; position: relative; }
+.login-card h1 { text-align: center; font-size: 34px; margin: 0; color: var(--bronze); text-shadow: 0 0 18px rgba(139,26,26,.6); }
+.login-card .subtitle { text-align: center; font-family: var(--font-fell); font-style: italic; color: var(--paper-dim); margin: 4px 0 18px; }
+.login-card .table-name { text-align: center; font-family: var(--font-head); color: var(--paper); margin-bottom: 14px; }
+.login-card form { display: flex; flex-direction: column; gap: 10px; }
+.login-card label { display: flex; flex-direction: column; gap: 3px; font-size: 14px; }
+.login-card input[type=text], .login-card input[type=password] { font-size: 17px; padding: 7px 9px; }
+.login-card .check { flex-direction: row; align-items: center; gap: 8px; }
+.login-card .error { color: var(--blood-2); min-height: 1.3em; text-align: center; }
+.login-card .pending { text-align: center; padding: 10px 0; }
+.login-card .pending .candle { font-size: 42px; animation: flicker 2.4s infinite; }
+.login-card footer { margin-top: 16px; text-align: center; font-size: 12px; color: var(--muted); }
+@keyframes flicker { 0%,100% { opacity: 1; } 40% { opacity: .75; } 45% { opacity: .95; } 70% { opacity: .8; } }

@@ -1,0 +1,58 @@
+/* Estilos da ficha e diálogos do DuskBloods */
+.sheet-window .win-body { padding: 0; }
+.sheet-header { display: flex; gap: 12px; padding: 12px; border-bottom: 1px solid var(--line); background: radial-gradient(ellipse at left, #2a0d0e55, transparent 70%); align-items: flex-start; }
+.portrait { width: 96px; height: 96px; flex: none; border: 2px solid var(--bronze-2); border-radius: 6px; overflow: hidden; background: #1d1712; display: grid; place-items: center; font-family: var(--font-head); font-size: 30px; color: var(--bronze); cursor: pointer; box-shadow: 0 0 12px rgba(0,0,0,.6); }
+.portrait img { width: 100%; height: 100%; object-fit: cover; }
+.sheet-name { font-family: var(--font-head); font-size: 22px; color: var(--bronze); background: transparent; border: 0; border-bottom: 1px solid var(--line); border-radius: 0; padding: 2px 0; width: 100%; }
+.sheet-badge { background: #1a1410; border: 1px solid var(--line); border-radius: 12px; padding: 1px 8px; }
+.sheet-badge.danger b { color: var(--blood-2); }
+.sheet-tabs { display: flex; flex-wrap: wrap; gap: 2px; padding: 6px 10px 0; border-bottom: 1px solid var(--line-2); background: #0e0b09; position: sticky; top: 0; z-index: 2; }
+.sheet-tabs button { border-radius: 4px 4px 0 0; border-bottom: 0; font-size: 12px; padding: 5px 9px; background: transparent; }
+.sheet-tabs button.active { background: #221a13; color: var(--bronze); border-color: var(--line-2); }
+.sheet-body { padding: 10px 12px 16px; }
+.section-title { font-family: var(--font-head); font-size: 12px; letter-spacing: .18em; color: var(--bronze-dim); text-transform: uppercase; margin: 12px 0 5px; border-bottom: 1px solid var(--line); padding-bottom: 2px; }
+
+.tracks { display: grid; grid-template-columns: repeat(auto-fill, minmax(112px, 1fr)); gap: 6px; }
+.track { background: #120e0b; border: 1px solid var(--line); border-radius: 5px; padding: 5px 7px; }
+.track-label { font-family: var(--font-head); font-size: 10.5px; letter-spacing: .1em; color: var(--paper-dim); text-transform: uppercase; }
+.track-val { display: flex; align-items: center; gap: 4px; font-size: 14px; }
+.track-val input { width: 54px; font-family: var(--font-head); font-size: 16px; padding: 1px 4px; }
+.track-big { font-family: var(--font-head); font-size: 24px; color: var(--paper); line-height: 1.1; }
+.track-bar { height: 4px; background: #000; border-radius: 2px; margin-top: 3px; overflow: hidden; }
+.track-bar > div { height: 100%; }
+.track.blood .track-bar > div { background: var(--blood-2); }
+.track.bronze .track-bar > div { background: var(--bronze); }
+.track.pa .track-bar > div { background: var(--info); }
+.track.stat .track-big { color: var(--bronze); }
+
+.attr-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 6px; }
+.attr-col { background: #120e0b; border: 1px solid var(--line); border-radius: 5px; padding: 6px; }
+.attr-head { display: flex; align-items: center; gap: 4px; border-bottom: 1px solid var(--line); padding-bottom: 4px; margin-bottom: 4px; }
+.attr-head input { width: 46px; font-family: var(--font-head); font-size: 18px; text-align: center; padding: 0 2px; }
+.attr-name { flex: 1; text-align: left; font-size: 13px; background: transparent; border-color: transparent; padding: 2px 3px; color: var(--bronze); }
+.skill-row { display: flex; align-items: center; gap: 3px; font-size: 14px; }
+.skill-row.class-skill .skill-name { color: var(--bronze); }
+.skill-name { flex: 1; min-width: 0; text-align: left; font-family: var(--font-body); font-size: 13.5px; line-height: 1.15; white-space: normal; background: transparent; border-color: transparent; padding: 1px 3px; }
+.skill-name:hover { background: #2a0d0e; }
+.pips { display: inline-flex; gap: 2px; }
+.pip { width: 10px; height: 10px; border-radius: 50%; padding: 0; min-width: 0; border: 1px solid var(--bronze-dim); background: transparent; }
+.pip.on { background: var(--blood-2); border-color: #e04040; box-shadow: 0 0 4px rgba(224,64,64,.6); }
+.pool { font-family: var(--font-head); font-size: 11px; color: var(--muted); min-width: 30px; text-align: right; }
+.passive { margin-top: 10px; font-size: 14px; background: #150f0c; border-left: 3px solid var(--bronze-2); padding: 6px 9px; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 4px; margin: 4px 0; }
+.chip { display: inline-flex; align-items: center; gap: 3px; background: #1d1712; border: 1px solid var(--line-2); border-radius: 12px; padding: 1px 8px; font-size: 13px; }
+.chip.negativo, .chip.continuo { border-color: var(--blood); background: #2a0d0e; }
+.chip.positivo { border-color: #4f6b2a; background: #17200e; }
+.chip.especial { border-color: #5a4a7a; background: #1a1424; }
+.chip-x { border: 0; background: transparent; padding: 0 2px; font-size: 13px; color: var(--muted); }
+
+.weapon-card { background: #120e0b; border: 1px solid var(--line); border-radius: 5px; padding: 7px 9px; margin: 5px 0; display: flex; flex-direction: column; gap: 4px; }
+.tag { font-size: 11px; font-family: var(--font-head); border: 1px solid var(--line-2); border-radius: 10px; padding: 0 7px; color: var(--paper-dim); }
+.tag.danger { border-color: var(--blood); color: #ff9c9c; }
+.tag.gold { border-color: var(--bronze-2); color: var(--bronze); }
+.list-row { display: flex; align-items: flex-start; gap: 8px; padding: 5px 0; border-bottom: 1px dashed var(--line); }
+.actions-row { margin-bottom: 4px; }
+.dying-box { border: 1px solid var(--blood-2); background: #1a0607; border-radius: 5px; padding: 8px; margin: 8px 0; animation: dyingPulse 2.4s infinite; }
+@keyframes dyingPulse { 0%,100% { box-shadow: 0 0 0 rgba(178,42,42,0); } 50% { box-shadow: 0 0 14px rgba(178,42,42,.5); } }
+.statblock { font-family: var(--font-head); font-size: 13px; color: var(--bronze); border-top: 1px solid var(--bronze-dim); border-bottom: 1px solid var(--bronze-dim); padding: 4px 0; margin: 6px 0; }

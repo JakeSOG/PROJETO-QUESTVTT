@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuestVTT — Entrada</title>
+  <link rel="icon" href="/assets/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/login.css">
+</head>
+<body class="login">
+  <main class="login-card frame">
+    <h1>QuestVTT</h1>
+    <p class="subtitle">A noite é longa, caçador.</p>
+    <div class="ornament">Mesa</div>
+    <p class="table-name" id="tableName">…</p>
+
+    <form id="loginForm" autocomplete="on">
+      <label>Seu nome
+        <input type="text" name="name" id="name" maxlength="32" required autocomplete="username" autofocus>
+      </label>
+      <label>Senha pessoal <span class="muted small" id="pwHint">(crie uma na primeira vez)</span>
+        <input type="password" name="password" id="password" maxlength="100" autocomplete="current-password">
+      </label>
+      <label id="tablePwRow" class="hidden">Senha da mesa
+        <input type="password" name="tablePassword" id="tablePassword" maxlength="100">
+      </label>
+      <label class="check" id="spectatorRow"><input type="checkbox" id="spectator"> Entrar só para assistir (espectador)</label>
+      <div class="error" id="error" role="alert"></div>
+      <button class="primary" type="submit">Entrar na mesa</button>
+    </form>
+
+    <div id="pendingBox" class="pending hidden">
+      <div class="candle">🕯</div>
+      <p>Aguardando o Mestre aprovar sua entrada…</p>
+      <p class="muted small">Esta página continua sozinha quando você for aprovado.</p>
+      <button type="button" id="logoutBtn" class="small">Sair</button>
+    </div>
+
+    <footer>QuestVTT — Virtual Tabletop de código aberto (GPL-3.0)</footer>
+  </main>
+  <script type="module" src="/js/login.js"></script>
+</body>
+</html>
