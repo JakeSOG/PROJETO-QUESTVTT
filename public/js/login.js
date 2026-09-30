@@ -25,6 +25,9 @@ async function init() {
   $('tableName').textContent = info.tableName || '';
   document.title = `${info.tableName || 'QuestVTT'} — Entrada`;
   if (info.needsTablePassword) $('tablePwRow').classList.remove('hidden');
+  // Dica para o Mestre (o nome dele vem do config.json).
+  $('gmHint').textContent = `É o Mestre? Entre com o nome "${info.gmName}" e a senha do Mestre (gmPassword no config.json).`;
+  $('pendingGmHint').textContent = `É o Mestre? Clique em Sair e entre com o nome "${info.gmName}".`;
   if (!info.allowSpectators) $('spectatorRow').classList.add('hidden');
   if (info.user) {
     if (info.user.status === 'approved') { location.href = '/mesa'; return; }

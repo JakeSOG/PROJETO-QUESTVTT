@@ -28,12 +28,14 @@
       <label class="check" id="spectatorRow"><input type="checkbox" id="spectator"> Entrar só para assistir (espectador)</label>
       <div class="error" id="error" role="alert"></div>
       <button class="primary" type="submit">Entrar na mesa</button>
+      <p class="muted small center" id="gmHint"></p>
     </form>
 
     <div id="pendingBox" class="pending hidden">
       <div class="candle">🕯</div>
       <p>Aguardando o Mestre aprovar sua entrada…</p>
       <p class="muted small">Esta página continua sozinha quando você for aprovado.</p>
+      <p class="muted small" id="pendingGmHint"></p>
       <button type="button" id="logoutBtn" class="small">Sair</button>
     </div>
 
