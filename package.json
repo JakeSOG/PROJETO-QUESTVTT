@@ -9,12 +9,11 @@
     "test": "node --test test/*.test.js"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22.13"
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "bcryptjs": "^3.0.3",
-    "better-sqlite3": "^13.0.3",
     "express": "^4.22.3",
     "multer": "^2.4.0",
     "pixi.js": "^8.21.0",

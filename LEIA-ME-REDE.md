@@ -7,7 +7,7 @@ O QuestVTT roda **no PC do Mestre**. Os jogadores **não instalam nada**: só ab
 ## 1. Instalar o Node.js (uma vez só)
 
 1. Acesse **https://nodejs.org** e baixe a versão **LTS** (20 ou 22).
-2. Instale clicando em "Avançar" até o fim (pode deixar tudo como está).
+2. Instale clicando em "Avançar" até o fim (pode deixar tudo como está). Serve o Node **22 ou mais novo** (22, 24...).
 
 ## 2. Configurar a mesa (uma vez só)
 
@@ -69,7 +69,8 @@ Dê **dois cliques** em `INICIAR.bat`.
 | Antivírus bloqueou o Node.js | Adicione uma exceção para `node.exe` (normalmente em `C:\Program Files\nodejs`). |
 | "A porta 3000 já está em uso" | Outro programa usa a porta. Feche-o, ou troque `port` no `config.json` (ex.: `3001`) e rode o `LIBERAR-FIREWALL.bat` de novo. |
 | A mesa cai no meio da sessão | O PC do Mestre entrou em **suspensão**. Em *Configurações → Sistema → Energia*, coloque "Suspender" em **Nunca** enquanto joga. |
-| Erro ao instalar (better-sqlite3) | Use o Node **LTS** (20 ou 22, 64 bits). Se persistir, instale as "Ferramentas de Build" marcando a opção durante a instalação do Node.js e rode `INICIAR.bat` de novo. |
+| Erro ao instalar / `EPERM: operation not permitted` | Feche a janela, apague a pasta `node_modules` e rode `INICIAR.bat` de novo. Se continuar, mova a pasta do QuestVTT para fora de `Downloads`/OneDrive (ex.: `C:\QuestVTT`) e pause o antivírus durante a instalação. O QuestVTT não compila nada: não precisa de Python nem de Visual Studio. |
+| "Seu Node.js é antigo demais" | Instale o Node.js 22 LTS ou mais novo em https://nodejs.org. |
 | Sem som para os jogadores | O navegador bloqueia áudio até o primeiro clique: clique no aviso "🔊 Clique aqui para ativar o som". |
 | Esqueci a senha pessoal de um jogador | Remova o usuário na aba ⚙ (a ficha continua) e peça para ele entrar de novo. |
 

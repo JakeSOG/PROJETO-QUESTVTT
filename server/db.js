@@ -1,8 +1,72 @@
-// Banco SQLite (better-sqlite3) com migrações versionadas.
+// Banco SQLite com migrações versionadas, usando o SQLite EMBUTIDO no Node.js
+// (módulo node:sqlite, Node 22.13+). Nada para compilar na instalação.
 // O banco guarda o ESTADO da mesa. As REGRAS ficam nos JSON do sistema.
 const path = require('path');
 const fs = require('fs');
-const Database = require('better-sqlite3');
+
+// O Node avisa que node:sqlite é "experimental"; o aviso não afeta nada e só confunde o Mestre.
+const originalEmitWarning = process.emitWarning;
+process.emitWarning = function (warning, ...args) {
+  const text = typeof warning === 'string' ? warning : warning?.message || '';
+  if (/SQLite/i.test(text)) return;
+  return originalEmitWarning.call(process, warning, ...args);
+};
+
+let DatabaseSync;
+try {
+  ({ DatabaseSync } = require('node:sqlite'));
+} catch {
+  console.error(`\n✖ Este Node.js (${process.version}) não tem SQLite embutido.`);
+  console.error('  Instale o Node.js 22 LTS ou mais novo em https://nodejs.org e tente de novo.\n');
+  process.exit(1);
+}
+
+// Pequena camada com a mesma interface usada no resto do servidor:
+// prepare().run/get/all, exec, pragma, transaction(fn)(), backup(arquivo), close().
+class Database {
+  constructor(file) {
+    this.raw = new DatabaseSync(file);
+    this.cache = new Map();
+    this.depth = 0;
+  }
+  prepare(sql) {
+    let st = this.cache.get(sql);
+    if (!st) {
+      const stmt = this.raw.prepare(sql);
+      st = {
+        run: (...p) => stmt.run(...p),
+        get: (...p) => stmt.get(...p),
+        all: (...p) => stmt.all(...p)
+      };
+      this.cache.set(sql, st);
+    }
+    return st;
+  }
+  exec(sql) { this.raw.exec(sql); }
+  pragma(text) { this.raw.exec(`PRAGMA ${text}`); }
+  // Transação aninhável (usa SAVEPOINT quando já há uma aberta).
+  transaction(fn) {
+    return (...args) => {
+      const name = `sp${this.depth}`;
+      this.raw.exec(this.depth === 0 ? 'BEGIN' : `SAVEPOINT ${name}`);
+      this.depth++;
+      try {
+        const result = fn(...args);
+        this.depth--;
+        this.raw.exec(this.depth === 0 ? 'COMMIT' : `RELEASE ${name}`);
+        return result;
+      } catch (err) {
+        this.depth--;
+        this.raw.exec(this.depth === 0 ? 'ROLLBACK' : `ROLLBACK TO ${name}`);
+        throw err;
+      }
+    };
+  }
+  async backup(file) {
+    this.raw.exec(`VACUUM INTO '${String(file).replace(/'/g, "''")}'`);
+  }
+  close() { this.raw.close(); }
+}
 
 // Cada migração roda uma única vez, em ordem. Nunca edite uma migração antiga:
 // crie uma nova no fim da lista.

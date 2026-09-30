@@ -18,7 +18,7 @@ npm start          # ou dois cliques em INICIAR.bat no Windows
 Abra `http://localhost:3000`, entre com o `gmName` e a `gmPassword` do `config.json` (**troque a senha padrão**).
 O terminal mostra os endereços de **Rede local** e **Radmin VPN** (IP `26.x.x.x`) para passar aos jogadores.
 
-Requisitos: Node.js 20 ou 22 (LTS).
+Requisitos: Node.js 22.13 ou mais novo (22 LTS, 24...). O banco usa o SQLite embutido no Node, então a instalação não compila nada (não precisa de Python nem de Visual Studio).
 
 ## O que tem na mesa
 
@@ -47,7 +47,7 @@ PROJETO-QUESTVTT/
 ├─ INICIAR.bat / LIBERAR-FIREWALL.bat / config.json
 ├─ server/                 núcleo do VTT (não sabe nada de DuskBloods)
 │  ├─ index.js             Express + Socket.IO
-│  ├─ db.js / store.js     SQLite com migrações versionadas
+│  ├─ db.js / store.js     SQLite embutido do Node (node:sqlite) com migrações
 │  ├─ auth.js              login, sessões, papéis
 │  ├─ world.js             permissões e difusão filtrada por usuário
 │  ├─ systems.js           carrega sistemas de jogo (regras + compêndio + motor)
